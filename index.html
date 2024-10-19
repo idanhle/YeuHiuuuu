@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+    <head>
+        <title>Có gì đó hay ở đây </title>
+        <img src="" alt="">
+    </head>
+    <body>
+        <style>
+            button {
+                padding: 15px 25px;
+                font-size: 24px;
+                text-align: center;
+                cursor: pointer;
+                outline: none;
+                color: #fff;
+                background-color: #ff77e4;
+                border: none;
+                border-radius: 15px;
+                box-shadow: 0 2px #999;
+              }
+              
+            button:disabled{
+                background: aqua;
+                cursor: not-allowed;
+            }
+        </style>
+        <button id="buttonDemoved">
+            Chạm vào đây nào
+        </button>
+
+    </body>
+<script>
+    var button = document.getElementById('buttonDemoved');
+    button.onclick = () => {
+        var cacheName = button.textContent;
+
+        button.textContent = 'Anh yêu Híu <3';
+        button.setAttribute('disabled',true);
+
+        setTimeout(() => {
+            button.textContent = cacheName;
+
+        }, 10000);
+    };
+</script>
+
+</html>
